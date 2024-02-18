@@ -52,6 +52,9 @@ func Auth(input types.AuthInput) (types.AuthResponse, error) {
 		return types.AuthResponse{}, err
 	}
 
+
+	
+
 	if resp.StatusCode == http.StatusOK {
 		var authResponse types.AuthResponse
 		err = json.Unmarshal(bodyBytes, &authResponse)
